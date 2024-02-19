@@ -11,6 +11,9 @@ import Login from './pages/Login.jsx';
 import Layout from './components/Layout.jsx';
 import Home from './pages/Home.jsx';
 import Selection from './pages/Selection.jsx';
+import QuestionPage from './pages/Quiz/QuestionPage.jsx';
+import QuestionsTBT from './pages/TBT/QuestionsTBT.jsx';
+import Quiz from './components/Quiz.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +21,9 @@ const router = createBrowserRouter(
       <Route path="" element={<Home />} />
       <Route path="login" element={<Login />} />
       <Route path="select" element={<Selection />} />
+      <Route path="quiz" element={<QuestionPage />} />
+      <Route path="tbt" element={<QuestionsTBT />} />
+      <Route path="result" component={<Quiz />} />
     </Route>
   )
 );
