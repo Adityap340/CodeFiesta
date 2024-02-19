@@ -1,14 +1,14 @@
-import './App.css'
-import Navbar from './components/Navbar'
-import Login from './pages/Login'
+import './App.css';
+import Navbar from './components/Navbar';
+import { Link, Outlet } from 'react-router-dom';
 
-function App() {
+const App = () => {
   return (
     <>
       <Navbar />
-      <Login />
+      <Outlet />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
