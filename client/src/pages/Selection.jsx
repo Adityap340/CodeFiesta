@@ -1,18 +1,16 @@
 import React from "react";
-import IMG_6349 from '../assets/IMG_6349.png'
+import IMG_6349 from "../assets/IMG_6349.png";
 
 const Selection = () => {
   return (
     <div className="flex justify-center items-center h-screen">
       {/* First Card */}
       <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-4">
-        <a href="#">
-          <img
-            className="rounded-t-lg"
-            src={IMG_6349}
-            alt="First Logo"
-          />
-        </a>
+        <div>
+          <a href="#">
+            <img className="rounded-t-lg" src={IMG_6349} alt="First Logo" />
+          </a>
+        </div>
         <div className="p-5">
           <a href="#">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -46,11 +44,7 @@ const Selection = () => {
       {/* Second Card */}
       <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-4">
         <a href="#">
-          <img
-            className="rounded-t-lg"
-            src={IMG_6349}
-            alt="Second Logo"
-          />
+          <img className="rounded-t-lg" src={IMG_6349} alt="Second Logo" />
         </a>
         <div className="p-5">
           <a href="#">
