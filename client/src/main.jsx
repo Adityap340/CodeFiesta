@@ -14,6 +14,7 @@ import Selection from './pages/Selection.jsx';
 import QuestionPage from './pages/Quiz/QuestionPage.jsx';
 import QuestionsTBT from './pages/TBT/QuestionsTBT.jsx';
 import Quiz from './components/Quiz.jsx';
+import AuthProvider from './context/AuthProvider.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -29,5 +30,7 @@ const router = createBrowserRouter(
 );
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router}/> 
+  <AuthProvider>
+    <RouterProvider router={router}/>
+  </AuthProvider>
 );

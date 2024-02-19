@@ -1,31 +1,17 @@
 import React from "react";
-<<<<<<< HEAD
+import { Link } from "react-router-dom";
 import IMG_6349 from "../assets/IMG_6349.png";
-=======
-import { Link } from 'react-router-dom';
-import IMG_6349 from '../assets/IMG_6349.png';
->>>>>>> 7c802ade7bacdbdbefa85ff1409dc0b7f77a9602
 
 const Selection = () => {
   return (
     <div className="flex justify-center items-center h-screen">
       {/* First Card */}
       <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-4">
-<<<<<<< HEAD
         <div>
           <a href="#">
             <img className="rounded-t-lg" src={IMG_6349} alt="First Logo" />
           </a>
         </div>
-=======
-        <Link to="/quiz"> {/* Use Link component to navigate to "/quiz" */}
-          <img
-            className="rounded-t-lg"
-            src={IMG_6349}
-            alt="First Logo"
-          />
-        </Link>
->>>>>>> 7c802ade7bacdbdbefa85ff1409dc0b7f77a9602
         <div className="p-5">
           <Link to="/quiz"> {/* Use Link component to navigate to "/quiz" */}
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -58,19 +44,9 @@ const Selection = () => {
 
       {/* Second Card */}
       <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-4">
-<<<<<<< HEAD
         <a href="#">
           <img className="rounded-t-lg" src={IMG_6349} alt="Second Logo" />
         </a>
-=======
-        <Link to="/tbt">
-          <img
-            className="rounded-t-lg"
-            src={IMG_6349}
-            alt="Second Logo"
-          />
-        </Link>
->>>>>>> 7c802ade7bacdbdbefa85ff1409dc0b7f77a9602
         <div className="p-5">
           <Link to="/tbt">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

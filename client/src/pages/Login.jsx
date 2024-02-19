@@ -7,7 +7,7 @@ const Login = () => {
   const [error, setError] = useState(null);
   const location = useLocation();
   const navigate = useNavigate();
-  const from = location.state?.from.pathname || "/";
+  const from = location.state?.from.pathname || "/select";
   const handleLogin = (event) => {
     event.preventDefault();
     const form = event.target;
