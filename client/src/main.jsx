@@ -10,12 +10,14 @@ import {
 import Login from './pages/Login.jsx';
 import Layout from './components/Layout.jsx';
 import Home from './pages/Home.jsx';
+import Selection from './pages/Selection.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="" element={<Home />} />
       <Route path="login" element={<Login />} />
+      <Route path="select" element={<Selection />} />
     </Route>
   )
 );
