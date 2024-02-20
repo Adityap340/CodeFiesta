@@ -1,0 +1,432 @@
+[
+    {
+        "question": "What is the capital of France?",
+        "options": [
+            "Berlin",
+            "Paris",
+            "Madrid",
+            "Rome"
+        ],
+        "correctAnswer": "Paris"
+    },
+    {
+        "question": "Who wrote 'Romeo and Juliet'?",
+        "options": [
+            "William Shakespeare",
+            "Jane Austen",
+            "Charles Dickens",
+            "Leo Tolstoy"
+        ],
+        "correctAnswer": "William Shakespeare"
+    },
+    {
+        "question": "What is the largest mammal?",
+        "options": [
+            "Elephant",
+            "Giraffe",
+            "Blue Whale",
+            "Hippopotamus"
+        ],
+        "correctAnswer": "Blue Whale"
+    },
+    {
+        "question": "Which planet is known as the Red Planet?",
+        "options": [
+            "Mars",
+            "Venus",
+            "Jupiter",
+            "Saturn"
+        ],
+        "correctAnswer": "Mars"
+    },
+    {
+        "question": "Who painted the Mona Lisa?",
+        "options": [
+            "Vincent van Gogh",
+            "Leonardo da Vinci",
+            "Pablo Picasso",
+            "Michelangelo"
+        ],
+        "correctAnswer": "Leonardo da Vinci"
+    },
+    {
+        "question": "What is the chemical symbol for water?",
+        "options": [
+            "H2O",
+            "CO2",
+            "NaCl",
+            "O2"
+        ],
+        "correctAnswer": "H2O"
+    },
+    {
+        "question": "Which country is known as the Land of the Rising Sun?",
+        "options": [
+            "China",
+            "India",
+            "Japan",
+            "South Korea"
+        ],
+        "correctAnswer": "Japan"
+    },
+    {
+        "question": "Who invented the telephone?",
+        "options": [
+            "Thomas Edison",
+            "Alexander Graham Bell",
+            "Nikola Tesla",
+            "Henry Ford"
+        ],
+        "correctAnswer": "Alexander Graham Bell"
+    },
+    {
+        "question": "What is the currency of Japan?",
+        "options": [
+            "Euro",
+            "Yen",
+            "Dollar",
+            "Pound"
+        ],
+        "correctAnswer": "Yen"
+    },
+    {
+        "question": "Which planet is known as the Morning Star?",
+        "options": [
+            "Venus",
+            "Mercury",
+            "Mars",
+            "Saturn"
+        ],
+        "correctAnswer": "Venus"
+    },
+    {
+        "question": "Who wrote 'To Kill a Mockingbird'?",
+        "options": [
+            "Harper Lee",
+            "J.K. Rowling",
+            "Ernest Hemingway",
+            "Stephen King"
+        ],
+        "correctAnswer": "Harper Lee"
+    },
+    {
+        "question": "What is the largest ocean on Earth?",
+        "options": [
+            "Atlantic Ocean",
+            "Indian Ocean",
+            "Arctic Ocean",
+            "Pacific Ocean"
+        ],
+        "correctAnswer": "Pacific Ocean"
+    },
+    {
+        "question": "What is the tallest mountain in the world?",
+        "options": [
+            "Mount Kilimanjaro",
+            "Mount Everest",
+            "K2",
+            "Mount Fuji"
+        ],
+        "correctAnswer": "Mount Everest"
+    },
+    {
+        "question": "What is the chemical symbol for gold?",
+        "options": [
+            "Au",
+            "Ag",
+            "Fe",
+            "Cu"
+        ],
+        "correctAnswer": "Au"
+    },
+    {
+        "question": "Who is known as the Father of Computers?",
+        "options": [
+            "Charles Babbage",
+            "Alan Turing",
+            "Ada Lovelace",
+            "John von Neumann"
+        ],
+        "correctAnswer": "Charles Babbage"
+    },
+    {
+        "question": "Which animal is known as the 'Ship of the Desert'?",
+        "options": [
+            "Camel",
+            "Horse",
+            "Elephant",
+            "Giraffe"
+        ],
+        "correctAnswer": "Camel"
+    },
+    {
+        "question": "Who discovered penicillin?",
+        "options": [
+            "Marie Curie",
+            "Alexander Fleming",
+            "Louis Pasteur",
+            "Robert Koch"
+        ],
+        "correctAnswer": "Alexander Fleming"
+    },
+    {
+        "question": "Which country is famous for the Great Barrier Reef?",
+        "options": [
+            "Australia",
+            "Brazil",
+            "Canada",
+            "South Africa"
+        ],
+        "correctAnswer": "Australia"
+    },
+    {
+        "question": "Who was the first person to step on the moon?",
+        "options": [
+            "Neil Armstrong",
+            "Buzz Aldrin",
+            "Yuri Gagarin",
+            "Alan Shepard"
+        ],
+        "correctAnswer": "Neil Armstrong"
+    },
+    {
+        "question": "Which river is the longest in the world?",
+        "options": [
+            "Nile",
+            "Amazon",
+            "Yangtze",
+            "Mississippi"
+        ],
+        "correctAnswer": "Nile"
+    },
+    {
+        "question": "Who painted the famous work 'The Starry Night'?",
+        "options": [
+            "Pablo Picasso",
+            "Vincent van Gogh",
+            "Leonardo da Vinci",
+            "Michelangelo"
+        ],
+        "correctAnswer": "Vincent van Gogh"
+    },
+    {
+        "question": "What is the chemical symbol for oxygen?",
+        "options": [
+            "O2",
+            "H2O",
+            "CO2",
+            "NaCl"
+        ],
+        "correctAnswer": "O2"
+    },
+    {
+        "question": "Who wrote '1984'?",
+        "options": [
+            "Aldous Huxley",
+            "George Orwell",
+            "Ray Bradbury",
+            "J.R.R. Tolkien"
+        ],
+        "correctAnswer": "George Orwell"
+    },
+    {
+        "question": "What is the largest continent?",
+        "options": [
+            "North America",
+            "Europe",
+            "Asia",
+            "Africa"
+        ],
+        "correctAnswer": "Asia"
+    },
+    {
+        "question": "What is the smallest planet in our solar system?",
+        "options": [
+            "Mercury",
+            "Mars",
+            "Venus",
+            "Pluto"
+        ],
+        "correctAnswer": "Mercury"
+    },
+    {
+        "question": "Who is the author of 'The Catcher in the Rye'?",
+        "options": [
+            "J.D. Salinger",
+            "F. Scott Fitzgerald",
+            "Ernest Hemingway",
+            "Mark Twain"
+        ],
+        "correctAnswer": "J.D. Salinger"
+    },
+    {
+        "question": "What is the chemical symbol for sodium?",
+        "options": [
+            "Na",
+            "K",
+            "Au",
+            "Ag"
+        ],
+        "correctAnswer": "Na"
+    },
+    {
+        "question": "Which country is known as the Land of the Midnight Sun?",
+        "options": [
+            "Norway",
+            "Sweden",
+            "Finland",
+            "Denmark"
+        ],
+        "correctAnswer": "Norway"
+    },
+    {
+        "question": "Who is the Greek god of the sea?",
+        "options": [
+            "Poseidon",
+            "Zeus",
+            "Hades",
+            "Apollo"
+        ],
+        "correctAnswer": "Poseidon"
+    },
+    {
+        "question": "What is the hardest natural substance on Earth?",
+        "options": [
+            "Diamond",
+            "Iron",
+            "Gold",
+            "Platinum"
+        ],
+        "correctAnswer": "Diamond"
+    },
+    {
+        "question": "Which country is known as the Land of a Thousand Lakes?",
+        "options": [
+            "Canada",
+            "Russia",
+            "Finland",
+            "Sweden"
+        ],
+        "correctAnswer": "Finland"
+    },
+    {
+        "question": "Who wrote 'The Great Gatsby'?",
+        "options": [
+            "Ernest Hemingway",
+            "F. Scott Fitzgerald",
+            "J.D. Salinger",
+            "Mark Twain"
+        ],
+        "correctAnswer": "F. Scott Fitzgerald"
+    },
+    {
+        "question": "Which element is used as a fuel in nuclear reactors?",
+        "options": [
+            "Uranium",
+            "Plutonium",
+            "Thorium",
+            "Radium"
+        ],
+        "correctAnswer": "Uranium"
+    },
+    {
+        "question": "Who was the first woman to win a Nobel Prize?",
+        "options": [
+            "Marie Curie",
+            "Rosalind Franklin",
+            "Dorothy Hodgkin",
+            "Ada Lovelace"
+        ],
+        "correctAnswer": "Marie Curie"
+    },
+    {
+        "question": "What is the chemical symbol for carbon?",
+        "options": [
+            "C",
+            "Co",
+            "Ca",
+            "Cu"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Who was the first President of the United States?",
+        "options": [
+            "George Washington",
+            "Thomas Jefferson",
+            "Abraham Lincoln",
+            "John Adams"
+        ],
+        "correctAnswer": "George Washington"
+    },
+    {
+        "question": "What is the largest bird in the world?",
+        "options": [
+            "Ostrich",
+            "Eagle",
+            "Albatross",
+            "Condor"
+        ],
+        "correctAnswer": "Ostrich"
+    },
+    {
+        "question": "Who discovered America?",
+        "options": [
+            "Christopher Columbus",
+            "Amerigo Vespucci",
+            "Vasco da Gama",
+            "Ferdinand Magellan"
+        ],
+        "correctAnswer": "Christopher Columbus"
+    },
+    {
+        "question": "What is the chemical symbol for silver?",
+        "options": [
+            "Ag",
+            "Au",
+            "Pt",
+            "Cu"
+        ],
+        "correctAnswer": "Ag"
+    },
+    {
+        "question": "Who is known as the 'Father of the Indian Constitution'?",
+        "options": [
+            "Mahatma Gandhi",
+            "B.R. Ambedkar",
+            "Jawaharlal Nehru",
+            "Sardar Vallabhbhai Patel"
+        ],
+        "correctAnswer": "B.R. Ambedkar"
+    },
+    {
+        "question": "What is the chemical symbol for iron?",
+        "options": [
+            "Fe",
+            "Au",
+            "Ag",
+            "Pb"
+        ],
+        "correctAnswer": "Fe"
+    },
+    {
+        "question": "What is the national animal of India?",
+        "options": [
+            "Tiger",
+            "Lion",
+            "Elephant",
+            "Cow"
+        ],
+        "correctAnswer": "Tiger"
+    },
+    {
+        "question": "Who was the first man to orbit the Earth?",
+        "options": [
+            "Yuri Gagarin",
+            "Neil Armstrong",
+            "Buzz Aldrin",
+            "John Glenn"
+        ],
+        "correctAnswer": "Yuri Gagarin"
+    }
+]

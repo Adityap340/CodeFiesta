@@ -1,90 +1,107 @@
-// Quiz.js
 import React, { useState, useEffect, useContext } from 'react';
-// import { useNavigate } from 'react-router-dom';
-// import { AuthContext } from '../../context/AuthProvider';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthProvider';
 
 const Quiz = () => {
-//   const navigate = useNavigate();
-//   const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const { user } = useContext(AuthContext);
 
-//   const [questions, setQuestions] = useState([]);
-//   const [currentQuestions, setCurrentQuestions] = useState([]);
-//   const [currentIndex, setCurrentIndex] = useState(0);
-//   const [userAnswer, setUserAnswer] = useState("");
-//   const [score, setScore] = useState(0);
-//   const [quizTime, setQuizTime] = useState(20 * 60 * 1000); // 20 minutes in milliseconds
+  const [questions, setQuestions] = useState([]);
+  const [currentQuestions, setCurrentQuestions] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [userAnswer, setUserAnswer] = useState("");
+  const [score, setScore] = useState(0);
+  const [quizTime, setQuizTime] = useState(20 * 60 * 1000); // 20 minutes in milliseconds
 
-//   useEffect(() => {
-//     // Fetch questions from the JSON file
-//     fetch('/path/to/questions.json')
-//       .then(response => response.json())
-//       .then(data => setQuestions(data))
-//       .catch(error => console.error("Error fetching questions:", error));
-//   }, []);
+  const getData = async () => {
+    try {
+        const response = await fetch('questions.json', {
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        });
 
-//   useEffect(() => {
-//     // Shuffle and set the current questions
-//     const shuffledQuestions = questions.sort(() => Math.random() - 0.5).slice(0, 20);
-//     setCurrentQuestions(shuffledQuestions);
-//   }, [questions]);
+        if (!response.ok) {
+            throw new Error(response.statusText);
+        }
 
-//   useEffect(() => {
-//     // Start the quiz timer
-//     const timerId = setInterval(() => {
-//       setQuizTime(prevTime => prevTime - 1000);
-//       if (quizTime <= 0) {
-//         clearInterval(timerId);
-//         handleSubmission();
-//       }
-//     }, 1000);
+        const data = await response.json();
+        console.log(data); // Log the parsed JSON data
+    } catch (error) {
+        console.error('Error fetching questions:', error);
+    }
+};
 
-//     return () => clearInterval(timerId);
-//   }, [quizTime]);
 
-//   const handleAnswerSelection = (selectedAnswer) => {
-//     setUserAnswer(selectedAnswer);
-//   };
+  useEffect(() => {
+    getData();
+  }, []);
+  
 
-//   const handleSubmission = () => {
-//     const correctAnswer = currentQuestions[currentIndex].correctAnswer;
-//     if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
-//       setScore(prevScore => prevScore + 1);
-//     }
+  useEffect(() => {
+    // Shuffle and set the current questions
+    const shuffledQuestions = questions.sort(() => Math.random() - 0.5).slice(0, 20);
+    setCurrentQuestions(shuffledQuestions);
+  }, [questions]);
 
-//     if (currentIndex === 19) {
-//       // If it's the last question, submit the score to the database
-//       postScoreToDatabase();
-//     } else {
-//       // Move to the next question
-//       setCurrentIndex(prevIndex => prevIndex + 1);
-//       setUserAnswer("");
-//     }
-//   };
+  useEffect(() => {
+    // Start the quiz timer
+    const timerId = setInterval(() => {
+      setQuizTime(prevTime => prevTime - 1000);
+      if (quizTime <= 0) {
+        clearInterval(timerId);
+        handleSubmission();
+      }
+    }, 1000);
 
-//   const postScoreToDatabase = () => {
-//     const finalScore = score;
-//     const userEmail = user.email;
-//     const options = {
-//       method: "POST",
-//       headers: { "Content-Type": "application/json" },
-//       body: JSON.stringify({ email: userEmail, score: finalScore }),
-//     };
+    return () => clearInterval(timerId);
+  }, [quizTime]);
 
-//     fetch("https://your-firebase-database-url.firebaseio.com/scores.json", options)
-//       .then(response => {
-//         if (response.ok) {
-//           console.log("Data sent to Firebase");
-//           navigate('/quiz-results'); // Redirect to quiz results page
-//         } else {
-//           throw new Error('Failed to post data to Firebase');
-//         }
-//       })
-//       .catch(error => console.error("Error sending data to Firebase:", error));
-//   };
+  const handleAnswerSelection = (selectedAnswer) => {
+    setUserAnswer(selectedAnswer);
+  };
 
-//   if (currentQuestions.length === 0) {
-//     return <div>Loading...</div>;
-//   }
+  const handleSubmission = () => {
+    const correctAnswer = currentQuestions[currentIndex].correctAnswer;
+    if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+      setScore(prevScore => prevScore + 1);
+    }
+
+    if (currentIndex === 19) {
+      // If it's the last question, submit the score to the database
+      postScoreToDatabase();
+    } else {
+      // Move to the next question
+      setCurrentIndex(prevIndex => prevIndex + 1);
+      setUserAnswer("");
+    }
+  };
+
+  const postScoreToDatabase = () => {
+    const finalScore = score;
+    const userEmail = user.email;
+    const options = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: userEmail, score: finalScore }),
+    };
+
+    fetch("https://your-firebase-database-url.firebaseio.com/scores.json", options)
+      .then(response => {
+        if (response.ok) {
+          console.log("Data sent to Firebase");
+          navigate('/select'); // Redirect to quiz results page
+        } else {
+          throw new Error('Failed to post data to Firebase');
+        }
+      })
+      .catch(error => console.error("Error sending data to Firebase:", error));
+  };
+
+  if (currentQuestions.length === 0) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div>
