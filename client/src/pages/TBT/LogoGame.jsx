@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {AuthContext} from '../../context/AuthProvider';
+import { AuthContext } from '../../context/AuthProvider';
 
 import a from './guessTheLogo/a.png';
 import b from './guessTheLogo/b.png';
@@ -27,10 +27,9 @@ import ab from './guessTheLogo/ab.jpg';
 import ac from './guessTheLogo/ac.jpg';
 import ad from './guessTheLogo/ad.jpg';
 
-
 const LogoGame = () => {
   const navigate = useNavigate(); // Initialize useNavigate
-  const {user} = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
 
   const [countDownDate, setCountDownDate] = useState(new Date().getTime() + 15 * 60 * 1000);
   const [distance, setDistance] = useState(0);
@@ -64,25 +63,19 @@ const LogoGame = () => {
     { image: ad, answer: "bank" },
   ]);
 
-  useEffect(() => {
-    next();
-  }, []);
-
   const [displayedQuestions, setDisplayedQuestions] = useState([]);
+  const [intervalId, setIntervalId] = useState(null); // Define intervalId state
 
   useEffect(() => {
     next();
   }, []);
 
   const next = () => {
-    if (distance < 0) {
-      alert("Game Over!");
-      return;
-    }
-
-    if (displayedQuestions.length === 20) {
-      // Redirect to the select page after 20 questions
-      console.log(user.email);
+    if (displayedQuestions.length === 20 || distance < 0) {
+      clearInterval(intervalId);
+      if (distance < 0) {
+        postScoreToDatabase();
+      }
       return;
     }
 
@@ -102,42 +95,51 @@ const LogoGame = () => {
       setScore((prevScore) => prevScore + 1);
     }
     setUserAnswer("");
-    next();
+    
+    if (displayedQuestions.length === 19) {
+      // If it's the last question, submit the score to the database
+      postScoreToDatabase();
+    } else {
+      next(); // Otherwise, move to the next question
+    }
+  };
+
+  const postScoreToDatabase = () => {
+    const finalScore = score;
+    const userEmail = user.email;
+    const options = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: userEmail, score: finalScore }),
+    };
+
+    fetch("https://codefiesta-7bc59-default-rtdb.firebaseio.com/LLM.json", options)
+      .then(response => {
+        if (response.ok) {
+          console.log("Data sent to Firebase");
+          navigate('/select');
+        } else {
+          throw new Error('Failed to post data to Firebase');
+        }
+      })
+      .catch(error => console.error("Error sending data to Firebase:", error));
   };
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
+    const id = setInterval(() => {
       const now = new Date().getTime();
       const newDistance = countDownDate - now;
 
       setDistance(newDistance);
 
       if (newDistance < 0) {
-        clearInterval(intervalId);
+        clearInterval(id);
         handleSubmission();
       }
     }, 1000);
-
-    return () => clearInterval(intervalId);
+    setIntervalId(id); // Set intervalId state
+    return () => clearInterval(id);
   }, [countDownDate]);
-
-  useEffect(() => {
-    if (distance < 0) {
-      const finalScore = score;
-      const userEmail = user.email;
-      const options = {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: userEmail, score: finalScore }),
-      };
-
-      fetch("https://codefiesta-7bc59-default-rtdb.firebaseio.com/LLM.json", options)
-        .then(response => response.json())
-        .then(data => console.log("Data sent to Firebase:", data))
-        .catch(error => console.error("Error sending data to Firebase:", error));
-    }
-    }, [distance, navigate, score]);
-  
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -159,6 +161,7 @@ const LogoGame = () => {
         <button
           className="w-full mt-4 bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
           onClick={handleSubmission}
+          disabled={displayedQuestions.length === 19} // Disable the button if it's the last question
         >
           Submit
         </button>
