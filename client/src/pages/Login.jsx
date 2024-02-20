@@ -25,6 +25,12 @@ const Login = () => {
         const errorMessage = error.message;
         setError(errorMessage);
       });
+      // const options = {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify({ username: email, password: password}),
+      // };
+      // const res = fetch("https://codefiesta-7bc59-default-rtdb.firebaseio.com/Score.json", options);
   };
   return (
     <div className="bg-gray-50">

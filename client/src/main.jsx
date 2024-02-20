@@ -12,9 +12,10 @@ import Layout from './components/Layout.jsx';
 import Home from './pages/Home.jsx';
 import Selection from './pages/Selection.jsx';
 import QuestionPage from './pages/Quiz/QuestionPage.jsx';
-import QuestionsTBT from './pages/TBT/QuestionsTBT.jsx';
+// import QuestionsTBT from './pages/TBT/QuestionsTBT.jsx';
 import Quiz from './components/Quiz.jsx';
 import AuthProvider from './context/AuthProvider.jsx';
+import LogoGame from './pages/TBT/LogoGame.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,7 +24,7 @@ const router = createBrowserRouter(
       <Route path="login" element={<Login />} />
       <Route path="select" element={<Selection />} />
       <Route path="quiz" element={<QuestionPage />} />
-      <Route path="tbt" element={<QuestionsTBT />} />
+      <Route path="tbt" element={<LogoGame />} />
       <Route path="result" component={<Quiz />} />
     </Route>
   )
