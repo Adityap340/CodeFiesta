@@ -11,7 +11,7 @@ const Quiz = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userAnswer, setUserAnswer] = useState("");
   const [score, setScore] = useState(0);
-  const [quizTime, setQuizTime] = useState(1 * 60 * 1000);
+  const [quizTime, setQuizTime] = useState(30 * 1000);
   const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
 
   const handleAnswerSelection = (selectedAnswer, index) => {
@@ -63,16 +63,16 @@ const Quiz = () => {
   useEffect(() => {
     const timerId = setInterval(() => {
       setQuizTime(prevTime => prevTime - 1000);
-      if (quizTime <= 0) {
+      if (quizTime === 0) {
         clearInterval(timerId);
         postScoreToDatabase();
-        // Automatically submit when the time runs out
-        // Redirect to selection page
+        navigate('/select'); // Redirect to quiz results page
       }
     }, 1000);
-
+  
     return () => clearInterval(timerId);
-  }, [quizTime]);
+  }, [quizTime, navigate]); // Include navigate in the dependency array
+  
 
   if (currentQuestions.length === 0) {
     return <div>Loading...</div>;
@@ -120,6 +120,7 @@ const Quiz = () => {
             outline: 'none',
             border: 'none',
           }}
+          disabled={currentIndex===19}
         >
           Submit
         </button>
