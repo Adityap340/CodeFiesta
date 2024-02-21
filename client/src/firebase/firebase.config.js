@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import 'firebase/database'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -9,6 +10,7 @@ import { getAnalytics } from "firebase/analytics";
 const firebaseConfig = {
   apiKey: "AIzaSyCcu-Vvv1iRRD5vH4sw7LgBlS09FLFc20M",
   authDomain: "codefiesta-a8d05.firebaseapp.com",
+  databaseURL: "https://codefiesta-a8d05-default-rtdb.firebaseio.com",
   projectId: "codefiesta-a8d05",
   storageBucket: "codefiesta-a8d05.appspot.com",
   messagingSenderId: "43287681686",

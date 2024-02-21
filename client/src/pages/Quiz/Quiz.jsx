@@ -1,65 +1,22 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
+import questionsData from './questions.json';
 
 const Quiz = () => {
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);
 
-  const [questions, setQuestions] = useState([]);
   const [currentQuestions, setCurrentQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userAnswer, setUserAnswer] = useState("");
   const [score, setScore] = useState(0);
-  const [quizTime, setQuizTime] = useState(20 * 60 * 1000); // 20 minutes in milliseconds
+  const [quizTime, setQuizTime] = useState(1 * 60 * 1000);
+  const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
 
-  const getData = async () => {
-    try {
-        const response = await fetch('questions.json', {
-            headers: { 
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            }
-        });
-
-        if (!response.ok) {
-            throw new Error(response.statusText);
-        }
-
-        const data = await response.json();
-        console.log(data); // Log the parsed JSON data
-    } catch (error) {
-        console.error('Error fetching questions:', error);
-    }
-};
-
-
-  useEffect(() => {
-    getData();
-  }, []);
-  
-
-  useEffect(() => {
-    // Shuffle and set the current questions
-    const shuffledQuestions = questions.sort(() => Math.random() - 0.5).slice(0, 20);
-    setCurrentQuestions(shuffledQuestions);
-  }, [questions]);
-
-  useEffect(() => {
-    // Start the quiz timer
-    const timerId = setInterval(() => {
-      setQuizTime(prevTime => prevTime - 1000);
-      if (quizTime <= 0) {
-        clearInterval(timerId);
-        handleSubmission();
-      }
-    }, 1000);
-
-    return () => clearInterval(timerId);
-  }, [quizTime]);
-
-  const handleAnswerSelection = (selectedAnswer) => {
+  const handleAnswerSelection = (selectedAnswer, index) => {
     setUserAnswer(selectedAnswer);
+    setSelectedOptionIndex(index);
   };
 
   const handleSubmission = () => {
@@ -69,12 +26,11 @@ const Quiz = () => {
     }
 
     if (currentIndex === 19) {
-      // If it's the last question, submit the score to the database
       postScoreToDatabase();
     } else {
-      // Move to the next question
       setCurrentIndex(prevIndex => prevIndex + 1);
       setUserAnswer("");
+      setSelectedOptionIndex(null); // Reset selected option after moving to the next question
     }
   };
 
@@ -87,7 +43,7 @@ const Quiz = () => {
       body: JSON.stringify({ email: userEmail, score: finalScore }),
     };
 
-    fetch("https://your-firebase-database-url.firebaseio.com/scores.json", options)
+    fetch("https://quiz-score-c834e-default-rtdb.firebaseio.com/scores.json", options)
       .then(response => {
         if (response.ok) {
           console.log("Data sent to Firebase");
@@ -99,28 +55,74 @@ const Quiz = () => {
       .catch(error => console.error("Error sending data to Firebase:", error));
   };
 
+  useEffect(() => {
+    const shuffledQuestions = questionsData.sort(() => Math.random() - 0.5).slice(0, 20);
+    setCurrentQuestions(shuffledQuestions);
+  }, []);
+
+  useEffect(() => {
+    const timerId = setInterval(() => {
+      setQuizTime(prevTime => prevTime - 1000);
+      if (quizTime <= 0) {
+        clearInterval(timerId);
+        postScoreToDatabase();
+        // Automatically submit when the time runs out
+        // Redirect to selection page
+      }
+    }, 1000);
+
+    return () => clearInterval(timerId);
+  }, [quizTime]);
+
   if (currentQuestions.length === 0) {
     return <div>Loading...</div>;
   }
 
   return (
-    <div>
+    <div style={{ padding: '1rem' }}>
       <div>
         <b>Timer: </b>{Math.floor((quizTime % (1000 * 60 * 60)) / (1000 * 60))}:
         {Math.floor((quizTime % (1000 * 60)) / 1000)}
       </div>
-      <div>
-        <h2>{currentQuestions[currentIndex].question}</h2>
-        <ul>
+      <div style={{ marginTop: '1rem' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>{currentQuestions[currentIndex].question}</h2>
+        <div>
           {currentQuestions[currentIndex].options.map((option, index) => (
-            <li key={index} onClick={() => handleAnswerSelection(option)}>
+            <button
+              key={index}
+              onClick={() => handleAnswerSelection(option, index)}
+              style={{
+                backgroundColor: selectedOptionIndex === index ? '#3490dc' : '#63b3ed',
+                color: 'white',
+                padding: '0.5rem 1rem',
+                borderRadius: '0.25rem',
+                marginRight: '0.5rem',
+                marginBottom: '0.5rem',
+                cursor: 'pointer',
+                outline: 'none',
+                border: 'none',
+              }}
+            >
               {option}
-            </li>
+            </button>
           ))}
-        </ul>
+        </div>
       </div>
-      <div>
-        <button onClick={handleSubmission}>Submit</button>
+      <div style={{ marginTop: '1rem' }}>
+        <button
+          onClick={handleSubmission}
+          style={{
+            backgroundColor: '#38a169',
+            color: 'white',
+            padding: '0.5rem 1rem',
+            borderRadius: '0.25rem',
+            cursor: 'pointer',
+            outline: 'none',
+            border: 'none',
+          }}
+        >
+          Submit
+        </button>
       </div>
     </div>
   );
