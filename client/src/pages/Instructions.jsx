@@ -15,7 +15,7 @@ const Instructions = () => {
                     to="/login"
                     className="btn btn-primary bg-pink-700 px-5 py-2 rounded text-white hover:text-pink-700 hover:bg-white border border-pink-700 hover:border-pink-700"
                 >
-                    Login
+                    Proceed 🚀
                 </Link>
             </div>
         </div>
