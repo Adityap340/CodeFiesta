@@ -10,6 +10,7 @@ import {
 import Login from './pages/Login.jsx';
 import Layout from './components/Layout.jsx';
 import Home from './pages/Home.jsx';
+import Instructions from './pages/Instructions.jsx'
 import Selection from './pages/Selection.jsx';
 import Quiz from './pages/Quiz/Quiz.jsx';
 import AuthProvider from './context/AuthProvider.jsx';
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="" element={<Home />} />
+      <Route path="instructions" element={<Instructions />} />
       <Route path="login" element={<Login />} />
       <Route path="select" element={<Selection />} />
       <Route path="quiz" element={<Quiz />} />
@@ -29,6 +31,6 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <AuthProvider>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </AuthProvider>
 );
