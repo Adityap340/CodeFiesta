@@ -38,7 +38,7 @@ const LogoGame = () => {
   const [userAnswer, setUserAnswer] = useState("");
   const [logoData] = useState([
     { image: a, answer: "angular" },
-    { image: b, answer: "opel" },
+    { image: b, answer: "openai" },
     { image: c, answer: "blackberry" },
     { image: d, answer: "vue" },
     { image: e, answer: "webpack" },
@@ -47,7 +47,7 @@ const LogoGame = () => {
     { image: h, answer: "national bradcasting company" },
     { image: i, answer: "dart" },
     { image: j, answer: "elm" },
-    { image: k, answer: "Atlassian" },
+    { image: k, answer: "atlassian" },
     { image: l, answer: "lisp" },
     { image: m, answer: "hindustan uniliver" },
     { image: n, answer: "capgemini" },
@@ -95,7 +95,7 @@ const LogoGame = () => {
       setScore((prevScore) => prevScore + 1);
     }
     setUserAnswer("");
-    
+
     if (displayedQuestions.length === 19) {
       // If it's the last question, submit the score to the database
       postScoreToDatabase();
@@ -150,7 +150,6 @@ const LogoGame = () => {
         </div>
         <img className="mx-auto mb-4" src={logoData[currentIndex].image} alt="logo" />
         <div id="timer"></div>
-        <div id="score" className="text-center mb-4">{score}</div>
         <input
           className="w-full p-2 border rounded answer"
           type="text"
