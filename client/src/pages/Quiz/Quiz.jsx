@@ -78,57 +78,40 @@ const Quiz = () => {
     return <div>Loading...</div>;
   }
 
-  return (
-    <div style={{ padding: '1rem' }}>
-      <div>
-        <b>Timer: </b>{Math.floor((quizTime % (1000 * 60 * 60)) / (1000 * 60))}:
-        {Math.floor((quizTime % (1000 * 60)) / 1000)}
-      </div>
-      <div style={{ marginTop: '1rem' }}>
-        <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>{currentQuestions[currentIndex].question}</h2>
-        <div>
-          {currentQuestions[currentIndex].options.map((option, index) => (
-            <button
-              key={index}
-              onClick={() => handleAnswerSelection(option, index)}
-              style={{
-                backgroundColor: selectedOptionIndex === index ? '#3490dc' : '#63b3ed',
-                color: 'white',
-                padding: '0.5rem 1rem',
-                borderRadius: '0.25rem',
-                marginRight: '0.5rem',
-                marginBottom: '0.5rem',
-                cursor: 'pointer',
-                outline: 'none',
-                border: 'none',
-              }}
-            >
-              {option}
-            </button>
-          ))}
-        </div>
-      </div>
-      <div style={{ marginTop: '1rem' }}>
+  return (<div className="p-4 mx-auto max-w-md">
+  <div className="text-center">
+    <b>Timer: </b>{Math.floor((quizTime % (1000 * 60 * 60)) / (1000 * 60))}:
+    {Math.floor((quizTime % (1000 * 60)) / 1000)}
+  </div>
+  <div className="mt-4">
+    <h2 className="text-lg font-bold mb-4 text-center">{currentQuestions[currentIndex].question}</h2>
+    <div>
+      {currentQuestions[currentIndex].options.map((option, index) => (
         <button
-          onClick={handleSubmission}
-          style={{
-            backgroundColor: '#38a169',
-            color: 'white',
-            padding: '0.5rem 1rem',
-            borderRadius: '0.25rem',
-            cursor: 'pointer',
-            outline: 'none',
-            border: 'none',
-          }}
-          disabled={currentIndex === 19}
+          key={index}
+          onClick={() => handleAnswerSelection(option, index)}
+          className={`w-full bg-sky-500 text-white px-4 py-2 rounded mb-2 cursor-pointer focus:outline-none ${selectedOptionIndex === index ? 'opacity-70' : ''}`}
         >
-          {currentIndex === 19 ? 'Submit' : 'Next'}
+          {option}
         </button>
-        <br />
-        <br />
-        <p>{currentIndex === 19 ? 'Note: Test will auto submit after the timer goes off!' : ''}</p>
-      </div>
+      ))}
     </div>
+  </div>
+  <div className="mt-4 text-center">
+    <button
+      onClick={handleSubmission}
+      className={`w-full bg-green-600 text-white px-4 py-2 rounded cursor-pointer focus:outline-none ${currentIndex === 19 ? 'opacity-50 cursor-not-allowed' : ''}`}
+      disabled={currentIndex === 19}
+    >
+      {currentIndex === 19 ? 'Submit' : 'Next'}
+    </button>
+    <br />
+    <br />
+    <p>{currentIndex === 19 ? 'Note: This is the last question, Select desired option and Test will auto-submit after the timer goes off!' : ''}</p>
+  </div>
+</div>
+
+
   );
 };
 
