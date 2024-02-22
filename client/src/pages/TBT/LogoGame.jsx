@@ -160,6 +160,7 @@ const LogoGame = () => {
         <button
           className="w-full mt-4 bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
           onClick={handleSubmission}
+          disabled={displayedQuestions.length === 19}
         >
           Submit
         </button>
