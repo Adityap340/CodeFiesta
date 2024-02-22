@@ -86,7 +86,7 @@ const LogoGame = () => {
 
     setDisplayedQuestions((prev) => [...prev, sel]);
     setCurrentIndex(sel);
-    setCountDownDate(new Date().getTime() + 20 * 1000);
+    setCountDownDate(new Date().getTime() + 17 * 1000);
   };
 
   const handleSubmission = () => {
@@ -166,7 +166,7 @@ const LogoGame = () => {
         </button>
         <br />
         <br />
-        <p>{displayedQuestions.length === 19 ? 'Note: This is the last question, type your answer and Test will auto-submit after the timer goes off!' : ''}</p>
+        <p>{displayedQuestions.length === 19 ? 'Note: Test will auto submit after the timer goes off!' : ''}</p>
       </div>
     </div>
   );

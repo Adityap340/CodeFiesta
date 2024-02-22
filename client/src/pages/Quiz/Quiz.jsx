@@ -58,7 +58,8 @@ const Quiz = () => {
   useEffect(() => {
     const shuffledQuestions = questionsData.sort(() => Math.random() - 0.5).slice(0, 20);
     setCurrentQuestions(shuffledQuestions);
-  }, []);
+  }, [questionsData]);
+  
 
   useEffect(() => {
     const timerId = setInterval(() => {

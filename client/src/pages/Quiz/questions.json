@@ -428,5 +428,395 @@
             "John Glenn"
         ],
         "correctAnswer": "Yuri Gagarin"
+    },
+    {
+        "question": "Who is the current President of the United States?",
+        "options": [
+            "Joe Biden",
+            "Donald Trump",
+            "Barack Obama",
+            "George W. Bush"
+        ],
+        "correctAnswer": "Joe Biden"
+    },
+    {
+        "question": "In which year did the COVID-19 pandemic officially begin?",
+        "options": [
+            "2019",
+            "2020",
+            "2021",
+            "2018"
+        ],
+        "correctAnswer": "2020"
+    },
+    {
+        "question": "What is the capital city of Australia?",
+        "options": [
+            "Sydney",
+            "Melbourne",
+            "Canberra",
+            "Brisbane"
+        ],
+        "correctAnswer": "Canberra"
+    },
+    {
+        "question": "Who won the Nobel Peace Prize in 2021?",
+        "options": [
+            "Greta Thunberg",
+            "Malala Yousafzai",
+            "World Food Programme",
+            "Joe Biden"
+        ],
+        "correctAnswer": "World Food Programme"
+    },
+    {
+        "question": "Which country hosted the 2020 Summer Olympics?",
+        "options": [
+            "China",
+            "Japan",
+            "South Korea",
+            "Brazil"
+        ],
+        "correctAnswer": "Japan"
+    },
+    {
+        "question": "What is the currency of South Africa?",
+        "options": [
+            "Rand",
+            "Peso",
+            "Baht",
+            "Real"
+        ],
+        "correctAnswer": "Rand"
+    },
+    {
+        "question": "In 2022, which country became the first in the world to launch a digital currency?",
+        "options": [
+            "China",
+            "United States",
+            "Sweden",
+            "India"
+        ],
+        "correctAnswer": "China"
+    },
+    {
+        "question": "What is the main component of Earth's atmosphere?",
+        "options": [
+            "Nitrogen",
+            "Oxygen",
+            "Carbon dioxide",
+            "Hydrogen"
+        ],
+        "correctAnswer": "Nitrogen"
+    },
+    {
+        "question": "Which planet is known as the \"Red Planet\"?",
+        "options": [
+            "Venus",
+            "Mars",
+            "Jupiter",
+            "Saturn"
+        ],
+        "correctAnswer": "Mars"
+    },
+    {
+        "question": "Who won the 2021 Wimbledon Men's Singles title?",
+        "options": [
+            "Novak Djokovic",
+            "Rafael Nadal",
+            "Roger Federer",
+            "Andy Murray"
+        ],
+        "correctAnswer": "Novak Djokovic"
+    },
+    {
+        "question": "Which social media platform is known for its disappearing photos and videos feature?",
+        "options": [
+            "Facebook",
+            "Instagram",
+            "Snapchat",
+            "Twitter"
+        ],
+        "correctAnswer": "Snapchat"
+    },
+    {
+        "question": "What is the largest ocean on Earth?",
+        "options": [
+            "Atlantic Ocean",
+            "Indian Ocean",
+            "Southern Ocean",
+            "Pacific Ocean"
+        ],
+        "correctAnswer": "Pacific Ocean"
+    },
+    {
+        "question": "In which year did the Berlin Wall fall, leading to the reunification of Germany?",
+        "options": [
+            "1989",
+            "1991",
+            "1985",
+            "1993"
+        ],
+        "correctAnswer": "1989"
+    },
+    {
+        "question": "Who is the author of the Harry Potter book series?",
+        "options": [
+            "J.K. Rowling",
+            "George R.R. Martin",
+            "Stephen King",
+            "Suzanne Collins"
+        ],
+        "correctAnswer": "J.K. Rowling"
+    },
+    {
+        "question": "Which country is known as the \"Land of the Rising Sun\"?",
+        "options": [
+            "China",
+            "Japan",
+            "South Korea",
+            "Vietnam"
+        ],
+        "correctAnswer": "Japan"
+    },
+    {
+        "question": "What is the capital city of Canada?",
+        "options": [
+            "Toronto",
+            "Ottawa",
+            "Vancouver",
+            "Montreal"
+        ],
+        "correctAnswer": "Ottawa"
+    },
+    {
+        "question": "Which African country is the most populous?",
+        "options": [
+            "Nigeria",
+            "Ethiopia",
+            "South Africa",
+            "Egypt"
+        ],
+        "correctAnswer": "Nigeria"
+    },
+    {
+        "question": "Who is the current Secretary-General of the United Nations?",
+        "options": [
+            "Antonio Guterres",
+            "Ban Ki-moon",
+            "Kofi Annan",
+            "Boutros Boutros-Ghali"
+        ],
+        "correctAnswer": "Antonio Guterres"
+    },
+    {
+        "question": "Which continent is known as the \"Dark Continent\"?",
+        "options": [
+            "Africa",
+            "Antarctica",
+            "Asia",
+            "South America"
+        ],
+        "correctAnswer": "Africa"
+    },
+    {
+        "question": "Who won the 2022 FIFA World Cup?",
+        "options": [
+            "Brazil",
+            "Argentina",
+            "Germany",
+            "France"
+        ],
+        "correctAnswer": "Argentina"
+    },
+    {
+        "question": "What is the currency of Japan?",
+        "options": [
+            "Yen",
+            "Won",
+            "Yuan",
+            "Ringgit"
+        ],
+        "correctAnswer": "Yen"
+    },
+    {
+        "question": "Which element has the chemical symbol \"Hg\"?",
+        "options": [
+            "Gold",
+            "Mercury",
+            "Hydrogen",
+            "Helium"
+        ],
+        "correctAnswer": "Mercury"
+    },
+    {
+        "question": "What is the largest mammal in the world?",
+        "options": [
+            "Elephant",
+            "Blue Whale",
+            "Giraffe",
+            "Gorilla"
+        ],
+        "correctAnswer": "Blue Whale"
+    },
+    {
+        "question": "In 2022, who won the Nobel Prize in Literature?",
+        "options": [
+            "Haruki Murakami",
+            "Margaret Atwood",
+            "Olga Tokarczuk",
+            "Kazuo Ishiguro"
+        ],
+        "correctAnswer": "Olga Tokarczuk"
+    },
+    {
+        "question": "Which technology company is known for its electric cars and CEO Elon Musk?",
+        "options": [
+            "Apple",
+            "Google",
+            "Tesla",
+            "Microsoft"
+        ],
+        "correctAnswer": "Tesla"
+    },
+    {
+        "question": "What is the capital city of South Korea?",
+        "options": [
+            "Seoul",
+            "Tokyo",
+            "Beijing",
+            "Manila"
+        ],
+        "correctAnswer": "Seoul"
+    },
+    {
+        "question": "Who is the current Chancellor of Germany?",
+        "options": [
+            "Angela Merkel",
+            "Olaf Scholz",
+            "Helmut Kohl",
+            "Gerhard Schroeder"
+        ],
+        "correctAnswer": "Olaf Scholz"
+    },
+    {
+        "question": "Which river is the longest in the world?",
+        "options": [
+            "Amazon River",
+            "Nile River",
+            "Yangtze River",
+            "Mississippi River"
+        ],
+        "correctAnswer": "Nile River"
+    },
+    {
+        "question": "In 2023, which country hosted the G20 summit?",
+        "options": [
+            "United States",
+            "China",
+            "India",
+            "Italy"
+        ],
+        "correctAnswer": "Italy"
+    },
+    {
+        "question": "What is the capital city of Mexico?",
+        "options": [
+            "Mexico City",
+            "Rio de Janeiro",
+            "Buenos Aires",
+            "Lima"
+        ],
+        "correctAnswer": "Mexico City"
+    },
+    {
+        "question": "Which planet is known as the \"Gas Giant\"?",
+        "options": [
+            "Mars",
+            "Jupiter",
+            "Venus",
+            "Saturn"
+        ],
+        "correctAnswer": "Jupiter"
+    },
+    {
+        "question": "Who is the current Prime Minister of the United Kingdom?",
+        "options": [
+            "Boris Johnson",
+            "Theresa May",
+            "David Cameron",
+            "Tony Blair"
+        ],
+        "correctAnswer": "Boris Johnson"
+    },
+    {
+        "question": "In 2022, which country became the first to achieve a net-zero carbon footprint?",
+        "options": [
+            "Sweden",
+            "Denmark",
+            "Iceland",
+            "Bhutan"
+        ],
+        "correctAnswer": "Sweden"
+    },
+    {
+        "question": "What is the currency of Brazil?",
+        "options": [
+            "Peso",
+            "Real",
+            "Sol",
+            "Bolivar"
+        ],
+        "correctAnswer": "Real"
+    },
+    {
+        "question": "Which mountain range is the longest in the world?",
+        "options": [
+            "Andes",
+            "Himalayas",
+            "Rockies",
+            "Alps"
+        ],
+        "correctAnswer": "Himalayas"
+    },
+    {
+        "question": "Who is the current President of France?",
+        "options": [
+            "Emmanuel Macron",
+            "Nicolas Sarkozy",
+            "François Hollande",
+            "Jacques Chirac"
+        ],
+        "correctAnswer": "Emmanuel Macron"
+    },
+    {
+        "question": "Which famous scientist developed the theory of relativity?",
+        "options": [
+            "Isaac Newton",
+            "Albert Einstein",
+            "Stephen Hawking",
+            "Marie Curie"
+        ],
+        "correctAnswer": "Albert Einstein"
+    },
+    {
+        "question": "What is the official language of Iran?",
+        "options": [
+            "Arabic",
+            "Turkish",
+            "Farsi (Persian)",
+            "Urdu"
+        ],
+        "correctAnswer": "Farsi (Persian)"
+    },
+    {
+        "question": "In 2022, which city hosted the Winter Olympics?",
+        "options": [
+            "Pyeongchang",
+            "Beijing",
+            "Sochi",
+            "Vancouver"
+        ],
+        "correctAnswer": "Beijing"
     }
 ]

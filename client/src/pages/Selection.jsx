@@ -14,6 +14,7 @@ import Vaibhavi from "../assets/Vaibhavi.jpg";
 import Aditya from "../assets/Aditya.jpg";
 import Nishant from "../assets/Nishant.jpg";
 import Ayesha from "../assets/Ayesha Mulani.jpg";
+import Apurva from "../assets/ApurvaJoshi.jpg";
 
 // Your Card component
 // const Card = ({ imageUrl, title }) => (
@@ -58,7 +59,7 @@ const EventCardsRow = () => (
     <EventCard imageUrl={Ayesha} title="Ayesha Mulani" p="Team Lead" />
     <EventCard imageUrl={Aditya} title="Aditya Patil" p="Team Member" />
     <EventCard imageUrl={Nishant} title="Nishant Gangurde" p="Team Member" />
-    <EventCard imageUrl={Profile} title="Apurva Joshi" p="Team Member" />
+    <EventCard imageUrl={Apurva} title="Apurva Joshi" p="Team Member" />
   </div>
 
 );
@@ -98,9 +99,9 @@ const Selection = () => (
       title="Logo Quiz 1"
     /> */}
 
-    <h1 className="text-pink-500 text-2xl font-bold text-center mt-4">Our Events</h1>
+    <h1 className="text-rose-500 text-4xl font-bold text-center py-12">Our Events</h1>
 
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center">
       {/* First Card */}
       <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-4">
         <div>
@@ -173,11 +174,11 @@ const Selection = () => (
         </div>
       </div>
     </div>
-    <h1 className="text-center text-pink-500 text-2xl font-bold mb-10 m-7">Our Team Members</h1>
+    <h1 className="text-center text-rose-500 text-4xl font-bold mb-10 m-7">Our Team Members</h1>
     <EventCardsRow />
 
     <div style={{ margin: '100px' }}>
-      <h1 className="text-center text-pink-500 text-2xl font-bold mb-10 m-7">Our Sponsors</h1>
+      <h1 className="text-center text-rose-500 text-4xl font-bold mb-10 m-7">Our Sponsors</h1>
       <EventCardsRowWithCol />
     </div>
   </div>
