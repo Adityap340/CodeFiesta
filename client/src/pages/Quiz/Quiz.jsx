@@ -11,7 +11,7 @@ const Quiz = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userAnswer, setUserAnswer] = useState("");
   const [score, setScore] = useState(0);
-  const [quizTime, setQuizTime] = useState(30 * 1000);
+  const [quizTime, setQuizTime] = useState(30 * 1000 * 10);
   const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
 
   const handleAnswerSelection = (selectedAnswer, index) => {
@@ -69,10 +69,10 @@ const Quiz = () => {
         navigate('/select'); // Redirect to quiz results page
       }
     }, 1000);
-  
+
     return () => clearInterval(timerId);
   }, [quizTime, navigate]); // Include navigate in the dependency array
-  
+
 
   if (currentQuestions.length === 0) {
     return <div>Loading...</div>;
@@ -120,10 +120,13 @@ const Quiz = () => {
             outline: 'none',
             border: 'none',
           }}
-          disabled={currentIndex===19}
+          disabled={currentIndex === 19}
         >
-          Submit
+          {currentIndex === 19 ? 'Submit' : 'Next'}
         </button>
+        <br />
+        <br />
+        <p>{currentIndex === 19 ? 'Note: Test will auto submit after the timer goes off!' : ''}</p>
       </div>
     </div>
   );

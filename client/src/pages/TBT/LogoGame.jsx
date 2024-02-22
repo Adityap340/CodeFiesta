@@ -162,8 +162,11 @@ const LogoGame = () => {
           onClick={handleSubmission}
           disabled={displayedQuestions.length === 19}
         >
-          Submit
+          {displayedQuestions.length === 19 ? 'Submit' : 'Next'}
         </button>
+        <br />
+        <br />
+        <p>{displayedQuestions.length === 19 ? 'Note: Test will auto submit after the timer goes off!' : ''}</p>
       </div>
     </div>
   );
