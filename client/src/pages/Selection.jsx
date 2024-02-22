@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import IMG_6349 from "../assets/IMG_6349.png";
-import Logo from "../assets/logo.jpg";
 import Profile from "../assets/profile.jpg";
 
 import Sponsor1 from "../assets/1.jpg";
@@ -15,25 +14,6 @@ import Aditya from "../assets/Aditya.jpg";
 import Nishant from "../assets/Nishant.jpg";
 import Ayesha from "../assets/Ayesha Mulani.jpg";
 import Apurva from "../assets/ApurvaJoshi.jpg";
-
-// Your Card component
-// const Card = ({ imageUrl, title }) => (
-//   <div className="flex justify-center">
-//     <div className="max-w-xxl bg-white border border-gray-200 rounded-lg shadow m-5 mx-auto p-20">
-//       <div className="text-center">
-//         <a href="#">
-//           <img className="mx-auto rounded-t-lg mb-3" src={Logo} alt="Logo" />
-//         </a>
-
-//         <h1 className="text-pink-500 text-2xl font-bold mb-10">Trial By Trivia</h1>
-
-//         <h1 className="mx-20 text-justify mb-2">
-//           Trial by Trivia is an exhilarating quiz event that promises a thrilling blend of knowledge and entertainment. Participants engage in a battle of wits as they tackle a diverse range of trivia questions spanning various topics such as history, science, pop culture, and more. With rounds designed to challenge intellect and stimulate curiosity, contestants must tap into their wealth of general knowledge to outsmart their competitors. Whether you're a seasoned trivia enthusiast or a casual player, the event offers an inclusive and engaging environment for all. As the questions unfold, participants will experience a dynamic quiz atmosphere filled with excitement, camaraderie, and the chance to showcase their expertise in a friendly competition. "Trial by Trivia" is not just a quiz; it's an immersive and entertaining journey into the vast realm of facts and fun, making it a must-attend experience for anyone eager to test their knowledge and enjoy an evening of spirited competition.
-//         </h1>
-//       </div>
-//     </div>
-//   </div>
-// );
 
 const EventCard = ({ imageUrl, title, p }) => (
   <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-4">

@@ -9,22 +9,22 @@ import d from './guessTheLogo/d.png';
 import e from './guessTheLogo/e.png';
 import f from './guessTheLogo/f.png';
 import g from './guessTheLogo/g.png';
-import h from './guessTheLogo/h.jpg';
+import h from './guessTheLogo/h.png';
 import i from './guessTheLogo/i.png';
 import j from './guessTheLogo/j.png';
-import k from './guessTheLogo/k.jpg';
+import k from './guessTheLogo/k.png';
 import l from './guessTheLogo/l.png';
-import m from './guessTheLogo/m.jpg';
+import m from './guessTheLogo/m.png';
 import n from './guessTheLogo/n.jpg';
 import o from './guessTheLogo/o.png';
 import p from './guessTheLogo/p.png';
-import r from './guessTheLogo/r.jpg';
+import r from './guessTheLogo/r.png';
 import u from './guessTheLogo/u.png';
-import y from './guessTheLogo/y.jpg';
-import z from './guessTheLogo/z.jpg';
-import aa from './guessTheLogo/aa.jpg';
+import y from './guessTheLogo/y.png';
+import z from './guessTheLogo/z.png';
+import aa from './guessTheLogo/aa.png';
 import ab from './guessTheLogo/ab.png';
-import ac from './guessTheLogo/ac.jpg';
+import ac from './guessTheLogo/ac.png';
 import ad from './guessTheLogo/ad.jpg';
 
 const LogoGame = () => {
@@ -37,27 +37,27 @@ const LogoGame = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userAnswer, setUserAnswer] = useState("");
   const [logoData] = useState([
-    { image: a, answer: "angular" },
+    { image: a, answer: "nvidia" },
     { image: b, answer: "openai" },
-    { image: c, answer: "blackberry" },
-    { image: d, answer: "vue" },
-    { image: e, answer: "webpack" },
-    { image: f, answer: "redux" },
+    { image: c, answer: "docker" },
+    { image: d, answer: "shopify" },
+    { image: e, answer: "twitch" },
+    { image: f, answer: "red hat" },
     { image: g, answer: "solana" },
-    { image: h, answer: "toyota" },
-    { image: i, answer: "dart" },
-    { image: j, answer: "elm" },
-    { image: k, answer: "atlassian" },
-    { image: l, answer: "lisp" },
-    { image: m, answer: "hindustan uniliver" },
+    { image: h, answer: "oracle" },
+    { image: i, answer: "adidas" },
+    { image: j, answer: "reddit" },
+    { image: k, answer: "chanel" },
+    { image: l, answer: "ferrari" },
+    { image: m, answer: "airbnb" },
     { image: n, answer: "dropbox" },
-    { image: o, answer: "wipro" },
+    { image: o, answer: "paypal" },
     { image: p, answer: "cisco" },
-    { image: r, answer: "redbull" },
-    { image: u, answer: "accenture" },
-    { image: y, answer: "target" },
-    { image: z, answer: "olay" },
-    { image: aa, answer: "perl" },
+    { image: r, answer: "flutter" },
+    { image: u, answer: "wordpress" },
+    { image: y, answer: "kubernetes" },
+    { image: z, answer: "medium" },
+    { image: aa, answer: "domino's" },
     { image: ab, answer: "pepsi" },
     { image: ac, answer: "starbucks" },
     { image: ad, answer: "audi" },
