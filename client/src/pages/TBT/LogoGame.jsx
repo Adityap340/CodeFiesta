@@ -166,7 +166,7 @@ const LogoGame = () => {
         </button>
         <br />
         <br />
-        <p>{displayedQuestions.length === 19 ? 'Note: Test will auto submit after the timer goes off!' : ''}</p>
+        <p>{displayedQuestions.length === 19 ? 'Note: This is the last question, type your answer and Test will auto-submit after the timer goes off!' : ''}</p>
       </div>
     </div>
   );
