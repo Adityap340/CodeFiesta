@@ -14,16 +14,16 @@ import i from './guessTheLogo/i.png';
 import j from './guessTheLogo/j.png';
 import k from './guessTheLogo/k.jpg';
 import l from './guessTheLogo/l.png';
-import m from './guessTheLogo/m.png';
-import n from './guessTheLogo/n.png';
+import m from './guessTheLogo/m.jpg';
+import n from './guessTheLogo/n.jpg';
 import o from './guessTheLogo/o.png';
 import p from './guessTheLogo/p.png';
 import r from './guessTheLogo/r.jpg';
-import x from './guessTheLogo/x.jpg';
+import u from './guessTheLogo/u.png';
 import y from './guessTheLogo/y.jpg';
 import z from './guessTheLogo/z.jpg';
 import aa from './guessTheLogo/aa.jpg';
-import ab from './guessTheLogo/ab.jpg';
+import ab from './guessTheLogo/ab.png';
 import ac from './guessTheLogo/ac.jpg';
 import ad from './guessTheLogo/ad.jpg';
 
@@ -44,23 +44,23 @@ const LogoGame = () => {
     { image: e, answer: "webpack" },
     { image: f, answer: "redux" },
     { image: g, answer: "solana" },
-    { image: h, answer: "national bradcasting company" },
+    { image: h, answer: "toyota" },
     { image: i, answer: "dart" },
     { image: j, answer: "elm" },
     { image: k, answer: "atlassian" },
     { image: l, answer: "lisp" },
     { image: m, answer: "hindustan uniliver" },
-    { image: n, answer: "capgemini" },
+    { image: n, answer: "dropbox" },
     { image: o, answer: "wipro" },
     { image: p, answer: "cisco" },
     { image: r, answer: "redbull" },
-    { image: x, answer: "armani" },
+    { image: u, answer: "accenture" },
     { image: y, answer: "target" },
     { image: z, answer: "olay" },
     { image: aa, answer: "perl" },
     { image: ab, answer: "pepsi" },
     { image: ac, answer: "starbucks" },
-    { image: ad, answer: "bank" },
+    { image: ad, answer: "audi" },
   ]);
 
   const [displayedQuestions, setDisplayedQuestions] = useState([]);
