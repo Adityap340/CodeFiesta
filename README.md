@@ -31,7 +31,7 @@ This project is a web-based quiz platform built using Vite+React and JavaScript,
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/CodeFiesta.git
+   git clone https://github.com/Adityap340/CodeFiesta.git
    cd client
    ```
 
@@ -69,7 +69,6 @@ npm run build
 1. **Login**
    - Navigate to the login page.
    - Enter your email and password to log in.
-   - username: admin@gmail.com password: admin@123 (dummy creds if you want to try out)
 
 2. **Taking a Quiz**
    - Select the type of quiz (MCQ or Logo Guessing).
